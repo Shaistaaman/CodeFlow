@@ -8,8 +8,6 @@ A 2D puzzle-platformer game where you play as a "Code Cleaner" navigating throug
 
 CodeFlow is an engaging game designed for Gen Z audiences that transforms programming concepts into an exciting adventure. The game features:
 
-![CodeFlow Game Screen ](gameScreen.png)
-
 - Cyberpunk-inspired visuals with neon colors and glitch effects
 - Intuitive gameplay mechanics centered around debugging and code optimization
 - Satisfying visual and audio feedback for every action
