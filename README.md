@@ -1,10 +1,14 @@
 # CodeFlow: The Debugging Odyssey
 
+![CodeFlow Game Banner](banner.png)
+
 A 2D puzzle-platformer game where you play as a "Code Cleaner" navigating through corrupted digital landscapes, using Amazon Q's debugging powers to fix broken code and optimize systems.
 
 ## Game Overview
 
 CodeFlow is an engaging game designed for Gen Z audiences that transforms programming concepts into an exciting adventure. The game features:
+
+![CodeFlow Game Screen ](gameScreen.png)
 
 - Cyberpunk-inspired visuals with neon colors and glitch effects
 - Intuitive gameplay mechanics centered around debugging and code optimization
@@ -12,6 +16,8 @@ CodeFlow is an engaging game designed for Gen Z audiences that transforms progra
 - Educational elements that introduce programming concepts in a fun way
 
 ## How to Play
+
+![CodeFlow Game Screen ](gameScreen.png)
 
 1. **Movement**: Use arrow keys or WASD to move your character in all directions
 2. **Q-Scan**: Press Q to scan for bugs in your vicinity
@@ -26,12 +32,14 @@ CodeFlow is an engaging game designed for Gen Z audiences that transforms progra
 ## Installation
 
 ### Option 1: Using the installation script (recommended)
+
 1. Run the installation script: `./install_and_run.sh`
    - This will create a virtual environment
    - Install pygame in the virtual environment
    - Run the game
 
 ### Option 2: Manual installation
+
 1. Make sure you have Python installed
 2. Create a virtual environment: `python -m venv venv`
 3. Activate the virtual environment:
@@ -41,7 +49,9 @@ CodeFlow is an engaging game designed for Gen Z audiences that transforms progra
 5. Run the game: `python main.py`
 
 ### Troubleshooting
+
 If you encounter issues with the full game, try running the simplified version:
+
 ```
 python simple_game.py
 ```
