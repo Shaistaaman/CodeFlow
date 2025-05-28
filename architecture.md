@@ -1,6 +1,7 @@
 # CodeFlow: Game Architecture
 
 ## Folder Structure
+
 ```
 CodeFlow/
 ├── assets/                  # Game assets directory
@@ -19,6 +20,7 @@ CodeFlow/
 ```
 
 ## Component Diagram
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                          main.py                            │
@@ -50,67 +52,70 @@ CodeFlow/
 │  │ - draw()            │      │                     │       │
 │  └─────────────────────┘      │                     │       │
 │                               │                     │       │
-│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐  │
-│  │   SplashState   │  │  MenuState    │  │ LoadingState │  │
-│  └─────────────────┘  └───────────────┘  └──────────────┘  │
+│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐   │
+│  │   SplashState   │  │  MenuState    │  │ LoadingState │   │
+│  └─────────────────┘  └───────────────┘  └──────────────┘   │
 │                                                             │
-│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐  │
-│  │  GameplayState  │  │LevelComplete  │  │ GameOverState│  │
-│  └─────────────────┘  └───────────────┘  └──────────────┘  │
+│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐   │
+│  │  GameplayState  │  │LevelComplete  │  │ GameOverState│   │
+│  └─────────────────┘  └───────────────┘  └──────────────┘   │
 └─────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
 │                     game_objects.py                         │
 │                                                             │
-│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐  │
-│  │     Player      │  │   DataByte    │  │     Bug      │  │
-│  │ - x, y          │  │ - x, y        │  │ - x, y       │  │
-│  │ - width, height │  │ - size        │  │ - width      │  │
-│  │ - speed         │  │ - pulse       │  │ - height     │  │
-│  │ - health        │  │ - update()    │  │ - glitch     │  │
-│  │ - q_energy      │  │ - draw()      │  │ - highlighted│  │
-│  │ - update()      │  └───────────────┘  │ - update()   │  │
-│  │ - draw()        │                     │ - draw()     │  │
-│  └─────────────────┘                     └──────────────┘  │
+│  ┌─────────────────┐  ┌───────────────┐  ┌──────────────┐   │
+│  │     Player      │  │   DataByte    │  │     Bug      │   │
+│  │ - x, y          │  │ - x, y        │  │ - x, y       │   │
+│  │ - width, height │  │ - size        │  │ - width      │   │
+│  │ - speed         │  │ - pulse       │  │ - height     │   │
+│  │ - health        │  │ - update()    │  │ - glitch     │   │
+│  │ - q_energy      │  │ - draw()      │  │ - highlighted│   │
+│  │ - update()      │  └───────────────┘  │ - update()   │   │
+│  │ - draw()        │                     │ - draw()     │   │
+│  └─────────────────┘                     └──────────────┘   │
 │                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │                     Particle                         │   │
-│  │ - x, y                                              │   │
-│  │ - color, size, speed, direction                     │   │
-│  │ - lifetime                                          │   │
-│  │ - update()                                          │   │
-│  │ - draw()                                            │   │
-│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │                     Particle                        │    │
+│  │ - x, y                                              │    │
+│  │ - color, size, speed, direction                     │    │
+│  │ - lifetime                                          │    │
+│  │ - update()                                          │    │
+│  │ - draw()                                            │    │
+│  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
 │                       settings.py                           │
 │                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │ - Screen dimensions (WIDTH, HEIGHT)                 │   │
-│  │ - Game state constants                              │   │
-│  │ - Colors                                            │   │
-│  │ - Player settings                                   │   │
-│  │ - Game object settings                              │   │
-│  │ - FPS                                               │   │
-│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │ - Screen dimensions (WIDTH, HEIGHT)                 │    │
+│  │ - Game state constants                              │    │
+│  │ - Colors                                            │    │
+│  │ - Player settings                                   │    │
+│  │ - Game object settings                              │    │
+│  │ - FPS                                               │    │
+│  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Data Flow
 
 1. **Game Initialization**:
+
    - `main.py` initializes pygame and creates the game window
    - Creates a `GameStateManager` instance
    - Loads assets (fonts)
    - Starts the main game loop
 
 2. **Game State Management**:
+
    - `GameStateManager` maintains the current game state
    - Each state (Splash, Menu, Gameplay, etc.) inherits from `GameState`
    - States handle their own events, updates, and drawing
 
 3. **Gameplay Loop**:
+
    - Player moves around the screen
    - Player collects Data Bytes to gain Q-Energy
    - Player uses Q-Scan to highlight bugs
@@ -118,6 +123,7 @@ CodeFlow/
    - Game tracks bugs fixed, time, and score
 
 4. **Game Objects**:
+
    - `Player`: Controlled by the user, can move in all directions
    - `Bug`: Enemies that need to be fixed
    - `DataByte`: Collectibles that replenish Q-Energy
