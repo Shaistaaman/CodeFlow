@@ -1,10 +1,12 @@
 # CodeFlow: The Debugging Odyssey - A Pygame Adventure
 
-![CodeFlow Game Banner](https://via.placeholder.com/800x400.png?text=CodeFlow:+The+Debugging+Odyssey)
+![CodeFlow Game Banner](banner.png)
 
 ## Introduction
 
 Have you ever wanted to visualize what debugging code feels like? **CodeFlow: The Debugging Odyssey** transforms the abstract concept of debugging into an engaging 2D game experience. As a "Code Cleaner," you'll navigate through digital landscapes, scan for bugs, and fix them using your debugging powers.
+
+![CodeFlow Game ](splash.png)
 
 This blog post will guide you through setting up and playing CodeFlow on your local machine. Whether you're a programming enthusiast, a game developer, or just someone looking for a fun way to understand debugging concepts, this game offers an entertaining experience with educational undertones.
 
@@ -34,7 +36,7 @@ Before you begin, make sure you have the following installed:
 Open your terminal and run the following command to clone the CodeFlow repository:
 
 ```bash
-git clone https://github.com/yourusername/CodeFlow.git
+git clone https://github.com/Shaistaaman/CodeFlow/
 cd CodeFlow
 ```
 
@@ -55,6 +57,7 @@ chmod +x install_and_run.sh
 ```
 
 This script will:
+
 1. Create a virtual environment
 2. Install Pygame and other dependencies
 3. Run the game
@@ -79,6 +82,8 @@ pip install -r requirements.txt
 # Run the game
 python3 main.py
 ```
+
+![virtual environment](venvironment.png)
 
 ### Step 3: Troubleshooting
 
@@ -114,32 +119,49 @@ This version has fewer features but is useful for testing if Pygame is working c
 ## Game Screens
 
 ### 1. Splash Screen
+
 The game starts with a splash screen showing the title "CodeFlow: The Debugging Odyssey." Press any key to continue.
 
 ### 2. Main Menu
+
 From here, you can:
+
 - Start a new debugging session
 - Exit the game
+
+  ![CodeFlow Game Start ](startGame.png)
 
 Use the up/down arrow keys to navigate and Enter to select.
 
 ### 3. Loading Screen
+
 A brief loading screen with a progress bar appears before each level.
 
+![CodeFlow Game Loading ](loading.png)
+
 ### 4. Gameplay Screen
+
 This is where the main action happens. You'll see:
+
+![CodeFlow Game Screen ](gameScreen.png)
+
 - Your character (the Code Cleaner)
 - Bugs that need fixing
 - Data Bytes to collect
 - HUD showing your health, Q-Energy, and remaining bugs
 
 ### 5. Level Complete Screen
+
 When you fix all bugs, you'll see your stats:
+
+![CodeFlow Game Score ](score.png)
+
 - Time taken
 - Bugs fixed
 - Final score
 
 ### 6. Game Over Screen
+
 If your health reaches zero, you'll see the "PROGRAM CRASHED!" screen. Press any key to return to the menu.
 
 ## Understanding the Code Structure
@@ -183,4 +205,4 @@ Clone the repository, set up your environment, and start your debugging adventur
 
 ---
 
-*This blog post is about a fictional game created for demonstration purposes. The GitHub repository mentioned is hypothetical.*
+_This blog post is about a fictional game created for demonstration purposes. The GitHub repository mentioned is hypothetical._
